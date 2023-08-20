@@ -89,8 +89,8 @@ function Footer() {
           className="flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md group"
         >
           <h1 className="text-xs font-medium text-opacity-60">TO TOP</h1>
-          <div className="overflow-hidden p-2 rounded-full border border-gray-600">
-            <img src="/icons/arrow-up.svg" alt="" className="w-4 group-hover:translate-y-8 transition-all duration-300" />
+          <div className="overflow-hidden p-2 rounded-full border border-gray-600 group-hover:border-white transition-all duration-300">
+            <img src="/icons/arrow-up.svg" alt="" className="w-4 group-hover:-translate-y-8 transition-all duration-300" />
           </div>
         </button>
       </div>

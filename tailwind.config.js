@@ -24,10 +24,15 @@ export default {
             transform: "translate(100px, -100px)" /* Bergerak ke arah atas kanan */,
           },
         },
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         exit: "exit 1s ease-in-out forwards",
         moveIcon: "moveIcon 0.5s ease-in-out forwards alternate",
+        marque: "marquee 10s ease-in-out forwards alternate",
       },
     },
   },

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../../components/footer/Footer";
 
 // Animation
 import "animate.css";
 import Fade from "react-reveal/Fade";
-import Footer from "../../components/footer/Footer";
+import Marquee from "react-fast-marquee";
 
 function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -167,6 +168,23 @@ function Home() {
         </section>
         {/* Section 1 End */}
 
+        {/* Maquee */}
+        <Fade>
+          <Marquee autoFill="true" className="bg-yellow-40 py-12">
+            <div className="bg-black w-5"></div>
+            <img src="/icons/react.svg" alt="" className="w-12" />
+            <div className="bg-black w-11"></div>
+            <img src="/icons/tailwind-css.svg" alt="" className="w-12" />
+            <div className="bg-black w-11"></div>
+            <img src="/icons/github.svg" alt="" className="w-12" />
+            <div className="bg-black w-11"></div>
+            <img src="/icons/vercel.svg" alt="" className="w-12" />
+            <div className="bg-black w-5"></div>
+          </Marquee>
+        </Fade>
+
+        {/* Maquee End */}
+
         {/* Services Section */}
         <section id="services" className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-14 px-5 md:px-14 lg:px-16 xl:py-32 py-10">
           <Fade bottom>
@@ -218,7 +236,7 @@ function Home() {
                   <div className="relative overflow-hidden h-[200px] md:w-full md:h-[400px] lg:h-[490px] xl:h-[600px] rounded-lg group/container">
                     <img src={project.pic} alt="" className="w-full h-full saturate-0 group-hover/container:scale-125 group-hover/container:saturate-100 transition-all duration-500" />
 
-                    <dix className="absolute left-3 md:left-10 bottom-6 md:bottom-11 flex lg:flex-col justify-center items-center gap-3 lg:items-start w-24 md:w-28 lg:w-[500px] lg:px-8 py-4 md:py-6 lg:py-8 rounded-lg bg-black">
+                    <dix className="absolute left-3 md:left-10 bottom-6 md:bottom-11 flex lg:flex-col justify-center items-center gap-3 lg:items-start w-24 md:w-28 lg:w-[500px] lg:px-8 py-4 md:py-6 lg:py-8 rounded-lg bg-black bg-opacity-50">
                       <h1 className="text-3xl xl:text-5xl text-white">{project.name}</h1>
                       <p className="hidden lg:block text-white text-left">{project.desc}</p>
                       <Link className="hidden lg:flex jusitfy-center items-center gap-3 group/button">
@@ -340,7 +358,7 @@ function Home() {
 
         {/* About Section */}
         <Fade>
-          <section className="grid grid-cols-1 lg:grid-cols-[0.5fr,1fr]  lg:items-center gap-10 lg:gap-8 mx-5 md:mx-14 lg:mx-16 my-10 px-5 lg:px-12 py-10 rounded-lg bg-primary">
+          <section className="grid grid-cols-1 lg:grid-cols-[0.5fr,1fr]  lg:items-center gap-10 lg:gap-8 mx-5 md:mx-14 lg:mx-16 my-16 md:my-20 lg:my-28 px-5 lg:px-12 py-10 rounded-lg bg-primary">
             {/* Col 1 */}
             <div className="flex flex-col items-center gap-5">
               <div className="flex gap-3">
