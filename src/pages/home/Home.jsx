@@ -30,18 +30,20 @@ function Home() {
       {/* Navbar */}
       <nav className="sticky top-0 z-20">
         <nav className={`${navbarBackground} z-20 flex justify-between bg-primary text-white px-6 md:px-11 lg:px-16 py-3 md:py-5`}>
-          <Link className="text-2xl font-l">adam.</Link>
+          <Link to={"/"} className="text-2xl">
+            adam.
+          </Link>
 
           <button
             type="button"
             onClick={() => {
               setShowMenu(!showMenu);
             }}
-            className="flex md:hidden flex-col justify-center gap-2 w-[30px] h-[30px] "
+            className="flex md:hidden flex-col justify-center gap-2 w-[30px] h-[30px] group"
           >
-            <span className="bg-white w-full h-[1px]"></span>
-            <span className="bg-white w-full h-[1px]"></span>
-            <span className="bg-white w-full h-[1px]"></span>
+            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300 delay-300 ${showMenu ? "rotate-[38deg]" : "delay-0"}`}></span>
+            <span className={`${showMenu ? "w-0" : ""} bg-white w-full h-[1px] origin-right transition-all duration-300`}></span>
+            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300 delay-300 ${showMenu ? "-rotate-[38deg]" : "delay-0"}`}></span>
           </button>
 
           {/* Menu Desktop */}
@@ -71,9 +73,9 @@ function Home() {
       {/* Navbar End */}
 
       {/* Content */}
-      <div className={`${showMenu ? "before:opacity-60" : "before:opacity-0"} relative before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all`}>
+      <div className={`${showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"} relative`}>
         {/* Section 1 */}
-        <section className="grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 xl:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
+        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 xl:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
           <Fade bottom>
             <div className="flex flex-col gap-4 xl:gap-6">
               <h1 className="text-center md:text-left text-4xl md:text-[54px] lg:text-7xl md:leading-none">Front-end Web Developer</h1>
@@ -84,11 +86,18 @@ function Home() {
           <Fade bottom>
             <img src="/images/profile.jpg" alt="" className="rounded-full xl:w-[80%]" />
           </Fade>
+
+          <a href="#services" className="absolute bottom-10 left-14 hidden lg:flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md scale-110">
+            <div className="p-2 rounded-full border border-gray-600">
+              <img src="/icons/arrow-down.svg" alt="" className="w-4" />
+            </div>
+            <h1 className="text-xs font-medium text-opacity-60">MY SERVICES</h1>
+          </a>
         </section>
         {/* Section 1 End */}
 
         {/* Services Section */}
-        <section className="grid grid-cols-1  md:grid-cols-2 gap-12 lg:gap-14 px-5 md:px-14 lg:px-16 py-10">
+        <section id="services" className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-14 px-5 md:px-14 lg:px-16 xl:py-32 py-10">
           <Fade bottom>
             <div className="flex flex-col gap-2">
               <h1 className="text-sm font-medium opacity-70 uppercase">Services</h1>
@@ -134,8 +143,8 @@ function Home() {
           <Fade bottom>
             <div className="flex flex-col gap-5">
               {/* Project 1 */}
-              <button className="relative overflow-hidden h-[200px] md:w-full md:h-[400px] lg:h-[490px] xl:h-[600px] rounded-lg bg-yellow-400">
-                <img src="https://source.unsplash.com/1600x900/?art" alt="" className="w-full h-full top-0 bottom-0 left-0 right-0" />
+              <button className="relative overflow-hidden h-[200px] md:w-full md:h-[400px] lg:h-[490px] xl:h-[600px] rounded-lg bg-yellow-400 group">
+                <img src="https://source.unsplash.com/1600x900/?art" alt="" className="w-full h-full saturate-0 group-hover:scale-125 group-hover:saturate-100 transition-all duration-500" />
 
                 <dix className="absolute left-3 md:left-10 bottom-6 md:bottom-11 flex lg:flex-col justify-center items-center gap-3 lg:items-start w-24 md:w-28 lg:w-[500px] lg:px-8 py-4 md:py-6 lg:py-8 rounded-lg bg-black">
                   <h1 className="text-3xl xl:text-5xl text-white">Erikk</h1>
@@ -225,13 +234,13 @@ function Home() {
             {/* Col 1 */}
             <div className="flex flex-col items-center gap-5">
               <div className="flex gap-3">
-                <a href="" className="p-2 border border-gray-500 rounded-full">
+                <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/twitter.svg" alt="" className="w-4" />
                 </a>
-                <a href="" className="p-2 border border-gray-500 rounded-full">
+                <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/instagram.svg" alt="" className="w-4" />
                 </a>
-                <a href="" className="p-2 border border-gray-500 rounded-full">
+                <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/linkedin.svg" alt="" className="w-4" />
                 </a>
               </div>
@@ -247,17 +256,17 @@ function Home() {
             {/* Col 1 End */}
 
             {/* Col 2 */}
-            <div className="flex flex-col items-center lg:items-start gap-3 md:px-5">
-              <h1 className="text-white text-xs text-center lg:text-left font-medium text-opacity-60 ">ABOUT</h1>
+            <div className="flex flex-col items-center lg:items-start gap-5 md:px-5">
+              <h1 className="text-white text-xs xl:text-sm text-center lg:text-left font-medium text-opacity-60 ">ABOUT</h1>
               <h1 className="text-white text-center lg:text-left text-3xl md:text-5xl xl:text-6xl">A website that leaves a lasting impression!</h1>
               <p className="text-white text-center lg:text-left text-opacity-60">
                 Your website is your digital storefront, and it should create an unforgettable impression. Let me design and develop a website that reflects your brand's personality and creates a lasting impression on your audience. With my
                 expertise in web design and development, I can help you build a website that stands out and leaves a lasting impact.
               </p>
 
-              <Link className="flex justify-center items-center gap-3 mt-3">
-                <div className="border border-gray-600 rounded-full p-2">
-                  <img src="/icons/arrow-up-right.svg" alt="" className="w-4 " />
+              <Link className="flex justify-center items-center gap-3 mt-3 group">
+                <div className="overflow-hidden border border-gray-600 rounded-full p-2">
+                  <img src="/icons/arrow-up-right.svg" alt="" className="w-4 group-hover:animate-moveIcon group-hover:translate-x-5 transition-all" />
                 </div>
                 <h1 className="text-white text-xs font-medium">ABOUT ME</h1>
               </Link>
@@ -295,26 +304,26 @@ function Home() {
             <div className="flex flex-col gap-5">
               <h1 className="text-2xl font-l">adam.</h1>
               <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-3">
-                  <a href="" className="p-2 border border-gray-500 rounded-full">
+                <a href="" className="flex items-center gap-3">
+                  <div href="" className="p-2 border border-gray-500 rounded-full">
                     <img src="/icons/twitter.svg" alt="" className="w-4" />
-                  </a>
+                  </div>
                   <h1 className="text-xs font-medium text-white text-opacity-60">TWITTER</h1>
-                </div>
+                </a>
 
-                <div className="flex items-center gap-3">
-                  <a href="" className="p-2 border border-gray-500 rounded-full">
+                <a href="" className="flex items-center gap-3">
+                  <div className="p-2 border border-gray-500 rounded-full">
                     <img src="/icons/instagram.svg" alt="" className="w-4" />
-                  </a>
+                  </div>
                   <h1 className="text-xs font-medium text-white text-opacity-60">INSTAGRAM</h1>
-                </div>
+                </a>
 
-                <div className="flex items-center gap-3">
-                  <a href="" className="p-2 border border-gray-500 rounded-full">
+                <a href="" className="flex items-center gap-3">
+                  <div className="p-2 border border-gray-500 rounded-full">
                     <img src="/icons/linkedin.svg" alt="" className="w-4" />
-                  </a>
+                  </div>
                   <h1 className="text-xs font-medium text-white text-opacity-60">LINKEDIN</h1>
-                </div>
+                </a>
               </div>
             </div>
             {/* Col 1 End */}
@@ -367,12 +376,18 @@ function Home() {
             <h1 className="text-sm text-white font-medium text-opacity-60">
               © Made by <span className="underline">Nirvan Adam</span>{" "}
             </h1>
-            <Link className="flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md">
+            <button
+              type="button"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+              className="flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md"
+            >
               <h1 className="text-xs font-medium text-opacity-60">TO TOP</h1>
               <div className="p-2 rounded-full border border-gray-600">
                 <img src="/icons/arrow-up.svg" alt="" className="w-4" />
               </div>
-            </Link>
+            </button>
           </div>
         </footer>
         {/* Footer End */}

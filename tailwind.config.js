@@ -16,9 +16,18 @@ export default {
           "50%": { transform: "translateY(50px) translateZ(0)", opacity: "0.5" },
           "100%": { transform: "translateY(100px) translateZ(0)", opacity: "0", display: "none" },
         },
+        moveIcon: {
+          "0%": {
+            transform: "translate(0, 0)",
+          },
+          " 100%": {
+            transform: "translate(100px, -100px)" /* Bergerak ke arah atas kanan */,
+          },
+        },
       },
       animation: {
         exit: "exit 1s ease-in-out forwards",
+        moveIcon: "moveIcon 0.5s ease-in-out forwards alternate",
       },
     },
   },
