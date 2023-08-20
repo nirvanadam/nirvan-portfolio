@@ -88,7 +88,7 @@ function Home() {
           </Fade>
 
           <Fade bottom>
-            <img src="/images/profile.jpg" alt="" className="rounded-full w-[70%] xl:w-[80%] mx-auto" />
+            <img src="/images/profile.jpg" alt="" className="rounded-full xl:w-[80%] mx-auto" />
           </Fade>
 
           <a href="#services" className="absolute bottom-10 left-14 hidden lg:flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md scale-110">
