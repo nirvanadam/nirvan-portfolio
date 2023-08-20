@@ -79,7 +79,7 @@ function Home() {
         } relative overflow-hidden`}
       >
         {/* Section 1 */}
-        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 md:h-auto h-[90vh] md:w-auto lg:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-10 md:py-16">
+        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 md:h-auto h-screen md:w-auto lg:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-10 md:py-16">
           <Fade bottom>
             <div className="flex flex-col gap-4 xl:gap-6">
               <h1 className="text-center md:text-left text-4xl md:text-[54px] lg:text-7xl md:leading-none">Front-end Web Developer</h1>
