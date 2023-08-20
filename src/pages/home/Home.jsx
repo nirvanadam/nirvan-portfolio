@@ -73,21 +73,19 @@ function Home() {
       {/* Navbar End */}
 
       {/* Content */}
-      <div
-        className={`${
-          showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"
-        } relative overflow-hidden`}
-      >
+      <div className={`${showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"} relative`}>
         {/* Section 1 */}
-        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 h-[90vh] md:h-auto lg:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
+        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 md:h-auto lg:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-10 md:py-16">
           <Fade bottom>
             <div className="flex flex-col gap-4 xl:gap-6">
               <h1 className="text-center md:text-left text-4xl md:text-[54px] lg:text-7xl md:leading-none">Front-end Web Developer</h1>
-              <p className="xl:w-[70%] text-center md:text-xl xl:text-2xl md:text-left opacity-60 ">An enthusiastic front-end web developer with a passion for visual design and the ability to translate it into code.</p>
+              <p className="md:max-w-[60%] xl:w-[70%] text-center md:text-xl xl:text-2xl md:text-left opacity-60 ">An enthusiastic front-end web developer with a passion for visual design and the ability to translate it into code.</p>
             </div>
           </Fade>
 
-          <Fade bottom>{/* <img src="/images/profile.jpg" alt="" className="rounded-full xl:w-[80%]" /> */}</Fade>
+          <Fade bottom>
+            <img src="/images/profile.jpg" alt="" className="rounded-full xl:w-[80%]" />
+          </Fade>
 
           <a href="#services" className="absolute bottom-10 left-14 hidden lg:flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md scale-110">
             <div className="p-2 rounded-full border border-gray-600">
