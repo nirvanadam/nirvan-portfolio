@@ -147,7 +147,7 @@ function Home() {
           <Fade bottom>
             <div className="flex flex-col gap-5">
               {/* Project 1 */}
-              <button className="relative overflow-hidden h-[200px] md:w-full md:h-[400px] lg:h-[490px] xl:h-[600px] rounded-lg bg-yellow-400 group">
+              <button className="relative overflow-hidden h-[200px] md:w-full md:h-[400px] lg:h-[490px] xl:h-[600px] rounded-lg group">
                 <img src="https://source.unsplash.com/1600x900/?art" alt="" className="w-full h-full saturate-0 group-hover:scale-125 group-hover:saturate-100 transition-all duration-500" />
 
                 <dix className="absolute left-3 md:left-10 bottom-6 md:bottom-11 flex lg:flex-col justify-center items-center gap-3 lg:items-start w-24 md:w-28 lg:w-[500px] lg:px-8 py-4 md:py-6 lg:py-8 rounded-lg bg-black">
