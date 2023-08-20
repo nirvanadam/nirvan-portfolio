@@ -75,7 +75,7 @@ function Home() {
       {/* Content */}
       <div className={`${showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"} relative`}>
         {/* Section 1 */}
-        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 h-[90vh] md:h-auto lg:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
+        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 h-[90vh] w-fit md:h-auto lg:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
           <Fade bottom>
             <div className="flex flex-col gap-4 xl:gap-6">
               <h1 className="text-center md:text-left text-4xl md:text-[54px] lg:text-7xl md:leading-none">Front-end Web Developer</h1>
@@ -298,7 +298,7 @@ function Home() {
         {/* Content End */}
 
         {/* Footer */}
-        <footer className=" bg-primary text-white px-5 md:px-14 py-10">
+        <footer className=" bg-primary text-white px-5 md:px-14 py-10 w-fit">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
             {/* Col 1 */}
             <div className="flex flex-col gap-5">
