@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // Animation
 import "animate.css";
 import Fade from "react-reveal/Fade";
+import Footer from "../../components/footer/Footer";
 
 function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -24,6 +25,72 @@ function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const projects = [
+    {
+      id: 1,
+      name: "Erikk",
+      pic: "https://source.unsplash.com/1600x900/?art",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ipsam aperiam dicta officia, maiores soluta non quam! Beatae, deserunt!",
+    },
+    {
+      id: 2,
+      name: "Alvy",
+      pic: "https://source.unsplash.com/1600x901/?art",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ipsam aperiam dicta officia, maiores soluta non quam! Beatae, deserunt!",
+    },
+    {
+      id: 3,
+      name: "Fylla",
+      pic: "https://source.unsplash.com/1600x902/?art",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ipsam aperiam dicta officia, maiores soluta non quam! Beatae, deserunt!",
+    },
+  ];
+
+  const customers = [
+    {
+      id: 1,
+      name: "David Kim",
+      company: "Design Inc",
+      comment: "Aiko's web design brought our brand to life",
+      desc: "Aiko's expertise in web design breathed life into our brand. She captured our vision with precision, and delivered a website that stands out among our competitors.",
+    },
+    {
+      id: 2,
+      name: "John Smith",
+      company: "ABC Company",
+      comment: "Exceptional web design that exceeded our expectations",
+      desc: "Our website redesign surpassed our expectations. Aiko's attention to detail and creativity resulted in a visually stunning and user-friendly site that immediately boosted our online presence.",
+    },
+    {
+      id: 3,
+      name: "Emily Davis",
+      company: "Greenway Industries",
+      comment: "Highly recommended for web design and SEO",
+      desc: "Aiko's expertise in web design and SEO has exceeded our expectations. Her attention to detail and personalized approach make her highly recommended.",
+    },
+    {
+      id: 4,
+      name: "Karen Lee",
+      company: "Redwood Technologies",
+      comment: "Aiko delivered a website that showcases our business",
+      desc: "Aiko's web design resulted in a website that showcases our business in a professional and user-friendly manner. We couldn't be happier with the outcome.",
+    },
+    {
+      id: 5,
+      name: "Andrew Thompson",
+      company: "Silverstone Corporation",
+      comment: "Aiko's web design skills are unparalleled",
+      desc: "Aiko's web design skills are unparalleled. She's able to take our ideas and turn them into a visually stunning website that reflects our brand and captures our audience",
+    },
+    {
+      id: 6,
+      name: "Ryan Chen",
+      company: "Golden Gate Solutions",
+      comment: "Aiko's content creation and web design are top-notch",
+      desc: "Aiko's content creation and web design skills are top-notch. She's able to produce high-quality content that engages our audience, and design a website that complements our brand.",
+    },
+  ];
 
   return (
     <div>
@@ -52,8 +119,8 @@ function Home() {
             <Link className="text-white text-sm ">SERVICES</Link>
             <Link className="text-white text-sm ">ABOUT</Link>
             <Link className="text-white text-sm ">CONTACT</Link>
-            <Link className="flex justify-center items-center bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm">
-              <h1>LET'S TALK</h1>
+            <Link className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm group">
+              <h1 className="text-text group-hover:text-black transition-all duration-300 z-10">LET'S TALK</h1>
             </Link>
           </div>
           {/* Menu Desktop End */}
@@ -91,9 +158,9 @@ function Home() {
             <img src="/images/profile.jpg" alt="" className="rounded-full xl:w-[80%] mx-auto" />
           </Fade>
 
-          <a href="#services" className="absolute bottom-10 left-14 hidden lg:flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md scale-110">
-            <div className="p-2 rounded-full border border-gray-600">
-              <img src="/icons/arrow-down.svg" alt="" className="w-4" />
+          <a href="#services" className="absolute bottom-10 left-14 hidden lg:flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md scale-110 group">
+            <div className="overflow-hidden p-2 rounded-full border border-gray-600 group-hover:border-white transition-all duration-500">
+              <img src="/icons/arrow-down.svg" alt="" className="w-4 group-hover:translate-y-8 transition-all duration-300" />
             </div>
             <h1 className="text-xs font-medium text-opacity-60">MY SERVICES</h1>
           </a>
@@ -144,26 +211,31 @@ function Home() {
         <section className="px-5 md:px-14 lg:px-16 py-10">
           <h1 className="lg:ml-10 mb-5 text-3xl xl:text-5xl">Selected Work </h1>
 
-          <Fade bottom>
-            <div className="flex flex-col gap-5">
-              {/* Project 1 */}
-              <button className="relative overflow-hidden h-[200px] md:w-full md:h-[400px] lg:h-[490px] xl:h-[600px] rounded-lg group">
-                <img src="https://source.unsplash.com/1600x900/?art" alt="" className="w-full h-full saturate-0 group-hover:scale-125 group-hover:saturate-100 transition-all duration-500" />
+          <div className="flex flex-col gap-8">
+            {projects.map((project) => {
+              return (
+                <Fade bottom>
+                  <div className="relative overflow-hidden h-[200px] md:w-full md:h-[400px] lg:h-[490px] xl:h-[600px] rounded-lg group/container">
+                    <img src={project.pic} alt="" className="w-full h-full saturate-0 group-hover/container:scale-125 group-hover/container:saturate-100 transition-all duration-500" />
 
-                <dix className="absolute left-3 md:left-10 bottom-6 md:bottom-11 flex lg:flex-col justify-center items-center gap-3 lg:items-start w-24 md:w-28 lg:w-[500px] lg:px-8 py-4 md:py-6 lg:py-8 rounded-lg bg-black">
-                  <h1 className="text-3xl xl:text-5xl text-white">Erikk</h1>
-                  <p className="hidden lg:block text-white text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ipsam aperiam dicta officia, maiores soluta non quam! Beatae, deserunt!</p>
-                  <Link className="hidden lg:flex jusitfy-center items-center gap-3">
-                    <div className="bg-secondary p-2 rounded-full">
-                      <img src="/icons/arrow-up-right.svg" alt="" />
-                    </div>
-                    <h1 className="text-white text-sm">DISCOVER</h1>
-                  </Link>
-                </dix>
-              </button>
-              {/* Project 1 End */}
-            </div>
-          </Fade>
+                    <dix className="absolute left-3 md:left-10 bottom-6 md:bottom-11 flex lg:flex-col justify-center items-center gap-3 lg:items-start w-24 md:w-28 lg:w-[500px] lg:px-8 py-4 md:py-6 lg:py-8 rounded-lg bg-black">
+                      <h1 className="text-3xl xl:text-5xl text-white">{project.name}</h1>
+                      <p className="hidden lg:block text-white text-left">{project.desc}</p>
+                      <Link className="hidden lg:flex jusitfy-center items-center gap-3 group/button">
+                        <div className="overflow-hidden bg-secondary p-2 border border-secondary rounded-full group-hover/button:border-white transition-all duration-300">
+                          <img src="/icons/arrow-up-right.svg" alt="" className="group-hover:translate-x-5 group-hover/button:translate-x-5 group-hover/button:-translate-y-5 transition-all duration-300" />
+                        </div>
+                        <h1 className="text-white text-sm">DISCOVER</h1>
+                      </Link>
+                    </dix>
+                  </div>
+                </Fade>
+              );
+            })}
+            {/* Project 1 */}
+
+            {/* Project 1 End */}
+          </div>
         </section>
         {/* Selected Work Section End */}
 
@@ -197,6 +269,36 @@ function Home() {
                   </ul>
                 </div>
               </div>
+
+              <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 p-6 lg:p-8 rounded-lg border border-gray-300">
+                <h1 className="text-2xl">02</h1>
+
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-2xl">DESIGN</h1>
+                  <p className="opacity-60">Once the concept is established, I move on to the design phase. Here, I create a visual representation of the website that reflects the client's brand and messaging.</p>
+
+                  <ul className="flex flex-col gap-2 mt-3 px-5 list-disc">
+                    <li>Developing wireframes and mockup</li>
+                    <li>Choosing typography, color palettes, and imagery</li>
+                    <li>Refining the design</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 p-6 lg:p-8 rounded-lg border border-gray-300">
+                <h1 className="text-2xl">03</h1>
+
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-2xl">WEBFLOW</h1>
+                  <p className="opacity-60">After the design is finalized, I move on to building the website using Webflow.</p>
+
+                  <ul className="flex flex-col gap-2 mt-3 px-5 list-disc">
+                    <li>Translating the design into code using Webflow</li>
+                    <li>Responsive and functions perfectly across all devices</li>
+                    <li>Testing the website thoroughly before launch</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </Fade>
         </section>
@@ -212,21 +314,25 @@ function Home() {
           </Fade>
 
           <Fade bottom cascade>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-9">
-              <div className="flex flex-col gap-5 p-6 rounded-lg border border-gray-300">
-                <img src="/icons/target.svg" alt="" className="w-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-9">
+              {customers.map((customer) => {
+                return (
+                  <div className="flex flex-col gap-5 p-6 rounded-lg border border-gray-300">
+                    <img src="/icons/target.svg" alt="" className="w-8" />
 
-                <h1 className="text-2xl">Exceptional web design that exceeded our expectations</h1>
-                <p className="opacity-60">Our website redesign surpassed our expectations. Aiko's attention to detail and creativity resulted in a visually stunning and user-friendly site that immediately boosted our online presence.</p>
+                    <h1 className="text-2xl">{customer.comment}</h1>
+                    <p className="opacity-60">{customer.desc}</p>
 
-                <div className="flex items-center gap-4">
-                  <img src="/icons/user.svg" alt="" className="bg-black p-3 rounded-full" />
-                  <div className="text-xs">
-                    <h1>JOHN SMITH</h1>
-                    <h1 className="opacity-70">ABC Company</h1>
+                    <div className="flex items-center gap-4">
+                      <img src="/icons/user.svg" alt="" className="bg-black p-3 rounded-full" />
+                      <div className="text-xs">
+                        <h1>{customer.name}</h1>
+                        <h1 className="opacity-70">{customer.company}</h1>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </Fade>
         </section>
@@ -269,8 +375,8 @@ function Home() {
               </p>
 
               <Link className="flex justify-center items-center gap-3 mt-3 group">
-                <div className="overflow-hidden border border-gray-600 rounded-full p-2">
-                  <img src="/icons/arrow-up-right.svg" alt="" className="w-4 group-hover:animate-moveIcon group-hover:translate-x-5 transition-all" />
+                <div className="overflow-hidden border border-gray-600 rounded-full p-2 group-hover:border-white transition-all duration-500">
+                  <img src="/icons/arrow-up-right.svg" alt="" className="w-4 group-hover:translate-x-5 group-hover:-translate-y-5 transition-all duration-300" />
                 </div>
                 <h1 className="text-white text-xs font-medium">ABOUT ME</h1>
               </Link>
@@ -302,98 +408,7 @@ function Home() {
         {/* Content End */}
 
         {/* Footer */}
-        <footer className=" bg-primary text-white px-5 md:px-14 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
-            {/* Col 1 */}
-            <div className="flex flex-col gap-5">
-              <h1 className="text-2xl font-l">adam.</h1>
-              <div className="flex flex-col gap-3">
-                <a href="" className="flex items-center gap-3">
-                  <div href="" className="p-2 border border-gray-500 rounded-full">
-                    <img src="/icons/twitter.svg" alt="" className="w-4" />
-                  </div>
-                  <h1 className="text-xs font-medium text-white text-opacity-60">TWITTER</h1>
-                </a>
-
-                <a href="" className="flex items-center gap-3">
-                  <div className="p-2 border border-gray-500 rounded-full">
-                    <img src="/icons/instagram.svg" alt="" className="w-4" />
-                  </div>
-                  <h1 className="text-xs font-medium text-white text-opacity-60">INSTAGRAM</h1>
-                </a>
-
-                <a href="" className="flex items-center gap-3">
-                  <div className="p-2 border border-gray-500 rounded-full">
-                    <img src="/icons/linkedin.svg" alt="" className="w-4" />
-                  </div>
-                  <h1 className="text-xs font-medium text-white text-opacity-60">LINKEDIN</h1>
-                </a>
-              </div>
-            </div>
-            {/* Col 1 End */}
-
-            {/* Col 2 */}
-            <div className="flex flex-col gap-5">
-              <h1 className="text-xl font-l">PAGES</h1>
-              <div className="flex flex-col gap-5">
-                <Link className="text-xs font-medium text-white text-opacity-60">HOME</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">SERVICES</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">ABOUT</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">CONTACT</Link>
-                <Link className="flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md bg-white">
-                  <h1 className="text-xs font-medium text-black text-opacity-60">MORE TEMPLATES</h1>
-                  <img src="/icons/arrow-up-right.svg" alt="" className="w-4 invert" />
-                </Link>
-              </div>
-            </div>
-            {/* Col 2 End */}
-
-            {/* Col 3 */}
-            <div className="flex flex-col gap-5">
-              <h1 className="text-xl font-l">CMS</h1>
-              <div className="flex flex-col gap-5">
-                <Link className="text-xs font-medium text-white text-opacity-60">WORK</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">WORK SINGLE</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">BLOG</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">BLOG SINGLE</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">PRICING</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">PRICING SINGLE</Link>
-              </div>
-            </div>
-            {/* Col 3 End */}
-
-            {/* Col 4 */}
-            <div className="flex flex-col gap-5">
-              <h1 className="text-xl font-l">UTILITY PAGES</h1>
-              <div className="flex flex-col gap-5">
-                <Link className="text-xs font-medium text-white text-opacity-60">404 ERROR PAGE</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">PASSWORD PROTECTTED</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">STYLE GUIDE</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">LICENSING</Link>
-                <Link className="text-xs font-medium text-white text-opacity-60">CHANGELOG</Link>
-              </div>
-            </div>
-            {/* Col 4 End */}
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center md:justify-between mt-10">
-            <h1 className="text-sm text-white font-medium text-opacity-60">
-              © Made by <span className="underline">Nirvan Adam</span>{" "}
-            </h1>
-            <button
-              type="button"
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}
-              className="flex justify-center items-center gap-2 w-fit px-4 py-3 rounded-md"
-            >
-              <h1 className="text-xs font-medium text-opacity-60">TO TOP</h1>
-              <div className="p-2 rounded-full border border-gray-600">
-                <img src="/icons/arrow-up.svg" alt="" className="w-4" />
-              </div>
-            </button>
-          </div>
-        </footer>
+        <Footer />
         {/* Footer End */}
       </div>
     </div>
