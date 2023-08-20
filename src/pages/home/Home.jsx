@@ -41,9 +41,9 @@ function Home() {
             }}
             className="flex md:hidden flex-col justify-center gap-2 w-[30px] h-[30px] group"
           >
-            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300 delay-300 ${showMenu ? "rotate-[38deg]" : "delay-0"}`}></span>
-            <span className={`${showMenu ? "w-0" : ""} bg-white w-full h-[1px] origin-right transition-all duration-300`}></span>
-            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300 delay-300 ${showMenu ? "-rotate-[38deg]" : "delay-0"}`}></span>
+            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "rotate-[38deg] delay-300" : "delay-0"}`}></span>
+            <span className={`${showMenu ? "w-0" : "w-full"} bg-white  h-[1px] transition-all duration-300`}></span>
+            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "-rotate-[38deg] delay-300" : "delay-0"}`}></span>
           </button>
 
           {/* Menu Desktop */}
@@ -75,7 +75,7 @@ function Home() {
       {/* Content */}
       <div className={`${showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"} relative`}>
         {/* Section 1 */}
-        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 xl:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
+        <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
           <Fade bottom>
             <div className="flex flex-col gap-4 xl:gap-6">
               <h1 className="text-center md:text-left text-4xl md:text-[54px] lg:text-7xl md:leading-none">Front-end Web Developer</h1>
