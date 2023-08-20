@@ -73,7 +73,11 @@ function Home() {
       {/* Navbar End */}
 
       {/* Content */}
-      <div className={`${showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"} relative`}>
+      <div
+        className={`${
+          showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"
+        } relative overflow-hidden`}
+      >
         {/* Section 1 */}
         <section className="relative grid grid-cols-1 md:grid-cols-[2fr,1fr] lg:grid-cols-[2fr,1.5fr] md:items-center gap-5 md:gap-12 h-[90vh] md:h-auto lg:h-[90vh] bg-primary text-white px-5 md:px-11 lg:px-16 py-8 md:py-16">
           <Fade bottom>
