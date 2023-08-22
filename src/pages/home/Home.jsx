@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { a } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Projects from "../../section/Projects";
 
@@ -90,7 +89,7 @@ function Home() {
             className="flex md:hidden flex-col justify-center gap-2 w-[30px] h-[30px] group"
           >
             <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "rotate-[38deg] delay-300" : "delay-0"}`}></span>
-            <span className={`${showMenu ? "w-0" : "w-full"} bg-white  h-[1px] transition-all duration-300`}></span>
+            <span className={`${showMenu ? "scale-x-0" : ""} w-full bg-white h-[1px] transition-all duration-300`}></span>
             <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "-rotate-[38deg] delay-300" : "delay-0"}`}></span>
           </button>
 
@@ -372,7 +371,7 @@ function Home() {
                   <img src="/icons/instagram.svg" alt="" className="w-4" />
                 </a>
                 <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
-                  <img src="/icons/aedin.svg" alt="" className="w-4" />
+                  <img src="/icons/linkedin.svg" alt="" className="w-4" />
                 </a>
               </div>
 

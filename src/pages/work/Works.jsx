@@ -40,7 +40,7 @@ function Works() {
             className="flex md:hidden flex-col justify-center gap-2 w-[30px] h-[30px] group"
           >
             <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "rotate-[38deg] delay-300" : "delay-0"}`}></span>
-            <span className={`${showMenu ? "w-0" : "w-full"} bg-white  h-[1px] transition-all duration-300`}></span>
+            <span className={`${showMenu ? "scale-x-0" : ""} w-full bg-white h-[1px] transition-all duration-300`}></span>
             <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "-rotate-[38deg] delay-300" : "delay-0"}`}></span>
           </button>
 

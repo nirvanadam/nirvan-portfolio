@@ -44,8 +44,8 @@ function About() {
     <div>
       {/* Navbar */}
       <nav className="sticky top-0 z-20">
-        <nav className={`${navbarBackground} z-20 flex justify-between bg-primary text-white px-6 md:px-11 lg:px-16 py-3 md:py-5`}>
-          <a href="/" className="text-2xl">
+        <nav className={`${navbarBackground} z-20 flex justify-between bg-white text-white px-6 md:px-11 lg:px-16 py-3 md:py-5`}>
+          <a href="/" className="text-2xl text-black">
             adam.
           </a>
 
@@ -56,9 +56,9 @@ function About() {
             }}
             className="flex md:hidden flex-col justify-center gap-2 w-[30px] h-[30px] group"
           >
-            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "rotate-[38deg] delay-300" : "delay-0"}`}></span>
-            <span className={`${showMenu ? "w-0" : "w-full"} bg-white  h-[1px] transition-all duration-300`}></span>
-            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "-rotate-[38deg] delay-300" : "delay-0"}`}></span>
+            <span className={`bg-black w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "rotate-[38deg] delay-300" : "delay-0"}`}></span>
+            <span className={`${showMenu ? "scale-x-0" : ""} w-full bg-black h-[1px] transition-all duration-300`}></span>
+            <span className={`bg-black w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "-rotate-[38deg] delay-300" : "delay-0"}`}></span>
           </button>
 
           {/* Menu Desktop */}
