@@ -152,11 +152,11 @@ function Contact() {
               />
 
               <input
-                type="text"
+                type="email"
                 name=""
                 id=""
-                placeholder="Your Name"
-                className="w-full px-4 py-3 border border-gray-700 rounded-md bg-secondary outline-none text-white focus:border-white transition-all duration-300 placeholder:font-medium placeholder:text-white placeholder:text-opacity-50 focus:placeholder:-translate-y-10 placeholder:transition-all placeholder:duration-300"
+                placeholder="Your Email"
+                className="w-full px-4 py-3 border border-gray-700 rounded-md bg-secondary outline-none text-white focus:border-white transition-all duration-300 placeholder:font-medium placeholder:text-white placeholder:text-opacity-50 focus:placeholder:-translate-y-10 focus:invalid:border-red-600 placeholder:transition-all placeholder:duration-300"
               />
 
               <textarea
