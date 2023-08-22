@@ -65,35 +65,35 @@ function About() {
           <div className="hidden md:flex items-center gap-9">
             <a
               href="/work"
-              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-black text-sm"
             >
               WORK
             </a>
 
             <a
               href="/services"
-              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-black text-sm"
             >
               SERVICES
             </a>
 
             <a
               href="/about"
-              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-black text-sm"
             >
               ABOUT
             </a>
 
             <a
               href="/contact"
-              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-black text-sm"
             >
               CONTACT
             </a>
 
             <a
               href="/contact"
-              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm group"
+              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-black before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm group"
             >
               <h1 className="text-text group-hover:text-black transition-all duration-300 z-10">LET'S TALK</h1>
             </a>
