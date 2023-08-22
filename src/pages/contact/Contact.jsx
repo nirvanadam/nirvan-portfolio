@@ -83,7 +83,7 @@ function Contact() {
           {/* Menu Desktop End */}
 
           {/* Menu Mobile */}
-          <div className={`${showMenu ? "flex top-16" : "flex -top-16 opacity-0"} md:hidden -z-10 absolute left-5 right-5 flex-col items-center gap-6 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
+          <div className={`${showMenu ? "flex top-16" : "flex -top-56 opacity-0"} md:hidden -z-10 absolute left-5 right-5 flex-col items-center gap-6 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
             <a
               href="/"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
@@ -132,7 +132,7 @@ function Contact() {
       >
         <section className="px-5 md:px-20 lg:px-36 xl:px-72 pt-10 pb-28">
           <Fade top>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center ">
               <div className="w-3/4">
                 <h1 className="text-sm text-white text-opacity-60 mb-2">CONTACT</h1>
                 <h1 className="text-4xl text-white">Let's get in touch.</h1>
@@ -142,9 +142,11 @@ function Contact() {
                 <a href="https://github.com/nirvanadam" target="_blank" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/github2.svg" alt="" className="w-6" />
                 </a>
+
                 <a href="https://www.instagram.com/nirvanadm/" target="_blank" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/instagram.svg" alt="" className="w-6" />
                 </a>
+
                 <a href="https://www.linkedin.com/in/nirvan-adam-pramudhyta-74643b14a/" target="_blank" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/linkedin.svg" alt="" className="w-6" />
                 </a>

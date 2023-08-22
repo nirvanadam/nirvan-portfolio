@@ -242,13 +242,15 @@ function About() {
               <div className="flex flex-col gap-4">
                 <h1 className="text-white text-3xl md:text-4xl xl:text-5xl text-center md:text-left">Nirvan Adam Pramudhyta</h1>
                 <div className="flex justify-center md:justify-start gap-3">
-                  <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
-                    <img src="/icons/twitter.svg" alt="" className="w-4" />
+                  <a href="https://github.com/nirvanadam" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
+                    <img src="/icons/github2.svg" alt="" className="w-4" />
                   </a>
-                  <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
+
+                  <a href="https://www.instagram.com/nirvanadm/" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                     <img src="/icons/instagram.svg" alt="" className="w-4" />
                   </a>
-                  <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
+
+                  <a href="https://www.linkedin.com/in/nirvan-adam-pramudhyta-74643b14a/" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                     <img src="/icons/linkedin.svg" alt="" className="w-4" />
                   </a>
                 </div>
