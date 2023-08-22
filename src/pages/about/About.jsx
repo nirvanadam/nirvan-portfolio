@@ -122,6 +122,13 @@ function About() {
             >
               ABOUT
             </Link>
+
+            <Link
+              to={"/contact"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              CONTACT
+            </Link>
           </div>
           {/* Menu Mobile End */}
         </nav>

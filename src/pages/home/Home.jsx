@@ -97,7 +97,7 @@ function Home() {
           {/* Menu Desktop */}
           <div className="hidden md:flex items-center gap-9">
             <Link
-              to={"/works"}
+              to={"/work"}
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
             >
               WORK
@@ -136,7 +136,7 @@ function Home() {
           {/* Menu Mobile */}
           <div className={`${showMenu ? "flex top-16" : "flex"} md:hidden -z-10 absolute -top-48 left-5 right-5 flex-col gap-4 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
             <Link
-              to={"/works"}
+              to={"/work"}
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
             >
               WORK
