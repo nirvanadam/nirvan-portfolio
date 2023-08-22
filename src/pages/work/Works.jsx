@@ -46,11 +46,38 @@ function Works() {
 
           {/* Menu Desktop */}
           <div className="hidden md:flex items-center gap-9">
-            <Link className="text-black text-sm ">WORK</Link>
-            <Link className="text-black text-sm ">SERVICES</Link>
-            <Link className="text-black text-sm ">ABOUT</Link>
-            <Link className="text-black text-sm ">CONTACT</Link>
-            <Link className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-primary px-4 py-2 rounded-sm text-sm text-white group">
+            <Link
+              to={"/work"}
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm "
+            >
+              WORK
+            </Link>
+
+            <Link
+              to={"/services"}
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm"
+            >
+              SERVICES
+            </Link>
+
+            <Link
+              to={"/about"}
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm"
+            >
+              ABOUT
+            </Link>
+
+            <Link
+              to={"/contact"}
+              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm"
+            >
+              CONTACT
+            </Link>
+
+            <Link
+              to={"/contact"}
+              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-primary px-4 py-2 rounded-sm text-sm text-white group"
+            >
               <h1 className="text-text group-hover:text-black transition-all duration-300 z-10">LET'S TALK</h1>
             </Link>
           </div>
@@ -58,12 +85,26 @@ function Works() {
 
           {/* Menu Mobile */}
           <div className={`${showMenu ? "flex top-16" : "flex"} md:hidden -z-10 absolute -top-48 left-5 right-5 flex-col gap-4 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
-            <Link className=" ">WORK</Link>
-            <Link className=" ">SERVICES</Link>
-            <Link className=" ">ABOUT</Link>
-            <Link className=" ">BLOG</Link>
-            <Link className=" ">PRICING</Link>
-            <Link className=" ">CONTACT</Link>
+            <Link
+              to={"/work"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              WORK
+            </Link>
+
+            <Link
+              to={"/services"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              SERVICES
+            </Link>
+
+            <Link
+              to={"/about"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              ABOUT
+            </Link>
           </div>
           {/* Menu Mobile End */}
         </nav>
@@ -98,6 +139,23 @@ function Works() {
 
         <section id="works" className="px-5 md:px-14 lg:px-16 py-5 mb-10 md:mb-16">
           <Projects />
+        </section>
+
+        <section className="flex flex-col items-center gap-5 px-5 md:px-14 lg:px-28 py-20 md:py-28 lg:py-56 bg-primary">
+          <Fade top>
+            <h1 className="text-white text-center text-opacity-60 text-xs xl:text-sm font-medium">LET'S TALK</h1>
+          </Fade>
+
+          <Fade bottom>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-[110px] text-center text-white leading-tight">Let's make your Website shine.</h1>
+          </Fade>
+
+          <Fade bottom>
+            <Link to={"/contact"} className="flex justify-center items-center gap-2 w-fit md:mt-5 px-4 py-3 rounded-md bg-white">
+              <h1 className="text-xs font-medium text-opacity-60">GET IN TOUCH</h1>
+              <img src="/icons/arrow-up-right.svg" alt="" className="w-4 invert" />
+            </Link>
+          </Fade>
         </section>
 
         <Footer />

@@ -96,13 +96,38 @@ function Home() {
 
           {/* Menu Desktop */}
           <div className="hidden md:flex items-center gap-9">
-            <Link to={"/works"} className="text-white text-sm ">
+            <Link
+              to={"/works"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+            >
               WORK
             </Link>
-            <Link className="text-white text-sm ">SERVICES</Link>
-            <Link className="text-white text-sm ">ABOUT</Link>
-            <Link className="text-white text-sm ">CONTACT</Link>
-            <Link className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm group">
+
+            <Link
+              to={"/services"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+            >
+              SERVICES
+            </Link>
+
+            <Link
+              to={"/about"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+            >
+              ABOUT
+            </Link>
+
+            <Link
+              to={"/contact"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+            >
+              CONTACT
+            </Link>
+
+            <Link
+              to={"/contact"}
+              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm group"
+            >
               <h1 className="text-text group-hover:text-black transition-all duration-300 z-10">LET'S TALK</h1>
             </Link>
           </div>
@@ -110,14 +135,33 @@ function Home() {
 
           {/* Menu Mobile */}
           <div className={`${showMenu ? "flex top-16" : "flex"} md:hidden -z-10 absolute -top-48 left-5 right-5 flex-col gap-4 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
-            <Link to={"/works"} className=" ">
+            <Link
+              to={"/works"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
               WORK
             </Link>
-            <Link className=" ">SERVICES</Link>
-            <Link className=" ">ABOUT</Link>
-            <Link className=" ">BLOG</Link>
-            <Link className=" ">PRICING</Link>
-            <Link className=" ">CONTACT</Link>
+
+            <Link
+              to={"/services"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              SERVICES
+            </Link>
+
+            <Link
+              to={"/about"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              ABOUT
+            </Link>
+
+            <Link
+              to={"/contact"}
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              CONTACT
+            </Link>
           </div>
           {/* Menu Mobile End */}
         </nav>
@@ -223,7 +267,7 @@ function Home() {
               <h1 className="text-sm font-medium opacity-70 uppercase">My Process</h1>
               <h1 className="text-3xl xl:text-5xl md:text-4xl md:leading-tight xl:leading-snug">Your Dream Website in just few steps</h1>
               <p className="text-lg opacity-70">From consultation to launch, our streamlined process ensures timely delivery and quality work.</p>
-              <Link className="flex justify-center items-center gap-2 w-fit mt-4 px-4 py-3 rounded-md bg-primary text-white text-xs font-medium ">
+              <Link to={"/contact"} className="flex justify-center items-center gap-2 w-fit mt-4 px-4 py-3 rounded-md bg-primary text-white text-xs font-medium ">
                 <h1>GET IN TOUCH</h1>
                 <img src="/icons/arrow-up-right.svg" alt="" className="w-4" />
               </Link>
@@ -351,7 +395,7 @@ function Home() {
                 expertise in web design and development, I can help you build a website that stands out and leaves a lasting impact.
               </p>
 
-              <Link className="flex justify-center items-center gap-3 mt-3 group">
+              <Link to={"/about"} className="flex justify-center items-center gap-3 mt-3 group">
                 <div className="overflow-hidden border border-gray-600 rounded-full p-2 group-hover:border-white transition-all duration-500">
                   <img src="/icons/arrow-up-right.svg" alt="" className="w-4 group-hover:translate-x-5 group-hover:-translate-y-5 transition-all duration-300" />
                 </div>
@@ -363,7 +407,7 @@ function Home() {
         </Fade>
         {/* About Section End */}
 
-        {/* Let's Talk Section */}
+        {/* Let's talk */}
         <section className="flex flex-col items-center gap-5 px-5 md:px-14 lg:px-28 py-20 md:py-28 lg:py-56 bg-primary">
           <Fade top>
             <h1 className="text-white text-center text-opacity-60 text-xs xl:text-sm font-medium">LET'S TALK</h1>
@@ -374,15 +418,13 @@ function Home() {
           </Fade>
 
           <Fade bottom>
-            <Link className="flex justify-center items-center gap-2 w-fit md:mt-5 px-4 py-3 rounded-md bg-white">
+            <Link to={"/contact"} className="flex justify-center items-center gap-2 w-fit md:mt-5 px-4 py-3 rounded-md bg-white">
               <h1 className="text-xs font-medium text-opacity-60">GET IN TOUCH</h1>
               <img src="/icons/arrow-up-right.svg" alt="" className="w-4 invert" />
             </Link>
           </Fade>
         </section>
-        {/* Let's Talk Section End */}
-
-        {/* Content End */}
+        {/* Let's Talk End */}
 
         {/* Footer */}
         <Footer />
