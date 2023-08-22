@@ -96,6 +96,13 @@ function Home() {
           {/* Menu Desktop */}
           <div className="hidden md:flex items-center gap-9">
             <a
+              href="/"
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
+            >
+              HOME
+            </a>
+
+            <a
               href="/work"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
             >
@@ -118,14 +125,7 @@ function Home() {
 
             <a
               href="/contact"
-              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
-            >
-              CONTACT
-            </a>
-
-            <a
-              href="/contact"
-              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm group"
+              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-secondary before:-left-3 before:w-[120%] before:scale-x-100 before:h-full before:-skew-x-[20deg] hover:before:scale-x-0 before:transition-all before:duration-300 bg-white border border-white px-4 py-2 rounded-sm text-sm group"
             >
               <h1 className="text-text group-hover:text-black transition-all duration-300 z-10">LET'S TALK</h1>
             </a>
@@ -134,6 +134,13 @@ function Home() {
 
           {/* Menu Mobile */}
           <div className={`${showMenu ? "flex top-16" : "flex"} md:hidden -z-10 absolute -top-48 left-5 right-5 flex-col gap-4 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
+            <a
+              href="/"
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+            >
+              HOME
+            </a>
+
             <a
               href="/work"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
@@ -364,13 +371,13 @@ function Home() {
             {/* Col 1 */}
             <div className="flex flex-col items-center gap-5">
               <div className="flex gap-3">
-                <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
-                  <img src="/icons/twitter.svg" alt="" className="w-4" />
+                <a href="https://github.com/nirvanadam" target="_blank" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
+                  <img src="/icons/github2.svg" alt="" className="w-4" />
                 </a>
-                <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
+                <a href="https://www.instagram.com/nirvanadm/" target="_blank" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/instagram.svg" alt="" className="w-4" />
                 </a>
-                <a href="" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
+                <a href="https://www.linkedin.com/in/nirvan-adam-pramudhyta-74643b14a/" target="_blank" className="p-2 border border-gray-500 rounded-full hover:scale-110 hover:border-white transition-all duration-300">
                   <img src="/icons/linkedin.svg" alt="" className="w-4" />
                 </a>
               </div>

@@ -10,21 +10,21 @@ function Footer() {
         <div className="flex flex-col gap-5">
           <h1 className="text-2xl font-l">adam.</h1>
           <div className="flex flex-col gap-3">
-            <a href="" className="flex items-center gap-3 group w-fit">
+            <a href="https://github.com/nirvanadam" target="_blank" className="flex items-center gap-3 group w-fit">
               <div className="p-2 border border-gray-500 rounded-full group-hover:scale-110 group-hover:border-white transition-all duration-300">
-                <img src="/icons/twitter.svg" alt="" className="w-4" />
+                <img src="/icons/github2.svg" alt="" className="w-4" />
               </div>
-              <h1 className="text-xs font-medium text-white text-opacity-60 group-hover:text-opacity-100 transition-all duration-300">TWITTER</h1>
+              <h1 className="text-xs font-medium text-white text-opacity-60 group-hover:text-opacity-100 transition-all duration-300">GITHUB</h1>
             </a>
 
-            <a href="" className="flex items-center gap-3 group w-fit">
+            <a href="https://www.instagram.com/nirvanadm/" target="_blank" className="flex items-center gap-3 group w-fit">
               <div className="p-2 border border-gray-500 rounded-full group-hover:scale-110 group-hover:border-white transition-all duration-300">
                 <img src="/icons/instagram.svg" alt="" className="w-4" />
               </div>
               <h1 className="text-xs font-medium text-white text-opacity-60 group-hover:text-opacity-100 transition-all duration-300">INSTAGRAM</h1>
             </a>
 
-            <a href="" className="flex items-center gap-3 group w-fit">
+            <a href="https://www.linkedin.com/in/nirvan-adam-pramudhyta-74643b14a/" target="_blank" className="flex items-center gap-3 group w-fit">
               <div className="p-2 border border-gray-500 rounded-full group-hover:scale-110 group-hover:border-white transition-all duration-300">
                 <img src="/icons/linkedin.svg" alt="" className="w-4" />
               </div>
