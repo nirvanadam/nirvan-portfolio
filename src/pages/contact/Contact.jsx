@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Fade } from "react-reveal";
 
 function Contact() {
+  const [showMenu, setShowMenu] = useState(false);
+  const [navbarBackground, setNavbarBackground] = useState();
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 50) {
+      setNavbarBackground("shadow-lg"); // Ganti warna sesuai yang diinginkan saat discroll ke bawah
+    } else {
+      setNavbarBackground(); // Kembalikan ke warna awal jika scroll ke atas
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
       {/* Navbar */}

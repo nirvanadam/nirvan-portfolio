@@ -395,12 +395,12 @@ function Home() {
                 expertise in web design and development, I can help you build a website that stands out and leaves a lasting impact.
               </p>
 
-              <Link to={"/about"} className="flex justify-center items-center gap-3 mt-3 group">
+              <a href="/about" className="flex justify-center items-center gap-3 mt-3 group">
                 <div className="overflow-hidden border border-gray-600 rounded-full p-2 group-hover:border-white transition-all duration-500">
                   <img src="/icons/arrow-up-right.svg" alt="" className="w-4 group-hover:translate-x-5 group-hover:-translate-y-5 transition-all duration-300" />
                 </div>
                 <h1 className="text-white text-xs font-medium">ABOUT ME</h1>
-              </Link>
+              </a>
             </div>
             {/* Col 2 End */}
           </section>
