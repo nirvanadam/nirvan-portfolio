@@ -118,7 +118,11 @@ function Contact() {
       {/* Navbar End */}
 
       {/* Content */}
-      <div className={`${showMenu ? "flex top-16" : "flex"} md:hidden -z-10 absolute -top-48 left-5 right-5 flex-col gap-4 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
+      <div
+        className={`${
+          showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"
+        } relative bg-primary`}
+      >
         <section className="px-5 md:px-20 lg:px-36 xl:px-72 pt-10 pb-28">
           <Fade top>
             <div className="flex justify-between items-center">
