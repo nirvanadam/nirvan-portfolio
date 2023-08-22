@@ -108,7 +108,7 @@ function About() {
           {/* Menu Desktop End */}
 
           {/* Menu Mobile */}
-          <div className={`${showMenu ? "flex top-16" : "flex"} md:hidden -z-10 absolute -top-48 left-5 right-5 flex-col gap-4 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
+          <div className={`${showMenu ? "flex top-16" : "flex -top-16 opacity-0"} md:hidden -z-10 absolute left-5 right-5 flex-col items-center gap-6 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
             <a
               href="/"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
@@ -139,9 +139,9 @@ function About() {
 
             <a
               href="/contact"
-              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
+              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-3 before:w-[120%] before:scale-x-100 before:h-full before:-skew-x-[20deg] hover:before:scale-x-0 before:transition-all before:duration-300 w-full bg-white border border-white px-4 py-2 rounded-sm text-sm group"
             >
-              CONTACT
+              <h1 className="text-black group-hover:text-white transition-all duration-300 z-10">LET'S TALK</h1>
             </a>
           </div>
           {/* Menu Mobile End */}
