@@ -44,10 +44,10 @@ function About() {
     <div>
       {/* Navbar */}
       <nav className="sticky top-0 z-20">
-        <nav className={`${navbarBackground} z-20 flex justify-between bg-white text-black px-6 md:px-11 lg:px-16 py-3 md:py-5`}>
-          <Link to={"/"} className="text-2xl">
+        <nav className={`${navbarBackground} z-20 flex justify-between bg-primary text-white px-6 md:px-11 lg:px-16 py-3 md:py-5`}>
+          <a href="/" className="text-2xl">
             adam.
-          </Link>
+          </a>
 
           <button
             type="button"
@@ -56,79 +56,79 @@ function About() {
             }}
             className="flex md:hidden flex-col justify-center gap-2 w-[30px] h-[30px] group"
           >
-            <span className={`bg-black w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "rotate-[38deg] delay-300" : "delay-0"}`}></span>
-            <span className={`${showMenu ? "w-0" : "w-full"} bg-black  h-[1px] transition-all duration-300`}></span>
-            <span className={`bg-black w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "-rotate-[38deg] delay-300" : "delay-0"}`}></span>
+            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "rotate-[38deg] delay-300" : "delay-0"}`}></span>
+            <span className={`${showMenu ? "w-0" : "w-full"} bg-white  h-[1px] transition-all duration-300`}></span>
+            <span className={`bg-white w-full h-[1px] origin-left transition-all duration-300  ${showMenu ? "-rotate-[38deg] delay-300" : "delay-0"}`}></span>
           </button>
 
           {/* Menu Desktop */}
           <div className="hidden md:flex items-center gap-9">
-            <Link
-              to={"/work"}
-              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm "
+            <a
+              href="/work"
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
             >
               WORK
-            </Link>
+            </a>
 
-            <Link
-              to={"/services"}
-              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm"
+            <a
+              href="/services"
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
             >
               SERVICES
-            </Link>
+            </a>
 
-            <Link
-              to={"/about"}
-              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm"
+            <a
+              href="/about"
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
             >
               ABOUT
-            </Link>
+            </a>
 
-            <Link
-              to={"/contact"}
-              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-black text-sm"
+            <a
+              href="/contact"
+              className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-white text-sm"
             >
               CONTACT
-            </Link>
+            </a>
 
-            <Link
-              to={"/contact"}
-              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-primary px-4 py-2 rounded-sm text-sm text-white group"
+            <a
+              href="/contact"
+              className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-2 before:w-0 before:h-full before:-skew-x-[20deg] hover:before:w-[115%] before:transition-all before:duration-300 bg-secondary border border-gray-700 px-4 py-2 rounded-sm text-sm group"
             >
               <h1 className="text-text group-hover:text-black transition-all duration-300 z-10">LET'S TALK</h1>
-            </Link>
+            </a>
           </div>
           {/* Menu Desktop End */}
 
           {/* Menu Mobile */}
           <div className={`${showMenu ? "flex top-16" : "flex"} md:hidden -z-10 absolute -top-48 left-5 right-5 flex-col gap-4 bg-secondary p-6 rounded-lg text-white text-sm transition-all duration-700`}>
-            <Link
-              to={"/work"}
+            <a
+              href="/work"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
             >
               WORK
-            </Link>
+            </a>
 
-            <Link
-              to={"/services"}
+            <a
+              href="/services"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
             >
               SERVICES
-            </Link>
+            </a>
 
-            <Link
-              to={"/about"}
+            <a
+              href="/about"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
             >
               ABOUT
-            </Link>
+            </a>
 
-            <Link
-              to={"/contact"}
+            <a
+              href="/contact"
               className="relative before:contents-[''] before:absolute before:bg-white before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 w-fit text-white text-sm"
             >
               CONTACT
-            </Link>
+            </a>
           </div>
           {/* Menu Mobile End */}
         </nav>
@@ -251,10 +251,10 @@ function About() {
                 Here, you'll find evidence of my ability to deliver bold and innovative interfaces through HTML, CSS, and JavaScript. I take pleasure in innovating to keep each project modern and compatible across various devices.
               </p>
 
-              <Link to={"/contact"} className="flex justify-center items-center gap-2 w-fit mt-3 md:mt-5 px-4 py-3 rounded-md bg-white">
+              <a href="/contact" className="flex justify-center items-center gap-2 w-fit mt-3 md:mt-5 px-4 py-3 rounded-md bg-white">
                 <h1 className="text-xs font-medium text-opacity-60">GET IN TOUCH</h1>
                 <img src="/icons/arrow-up-right.svg" alt="" className="w-4 invert" />
-              </Link>
+              </a>
             </div>
           </section>
         </Fade>
@@ -271,10 +271,10 @@ function About() {
           </Fade>
 
           <Fade bottom>
-            <Link to={"/contact"} className="flex justify-center items-center gap-2 w-fit md:mt-5 px-4 py-3 rounded-md bg-white">
+            <a href="/contact" className="flex justify-center items-center gap-2 w-fit md:mt-5 px-4 py-3 rounded-md bg-white">
               <h1 className="text-xs font-medium text-opacity-60">GET IN TOUCH</h1>
               <img src="/icons/arrow-up-right.svg" alt="" className="w-4 invert" />
-            </Link>
+            </a>
           </Fade>
         </section>
         {/* Let's Talk End */}
