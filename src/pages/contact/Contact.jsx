@@ -122,7 +122,7 @@ function Contact() {
         <section className="px-5 md:px-20 lg:px-36 xl:px-72 pt-10 pb-28">
           <Fade top>
             <div className="flex justify-between items-center">
-              <div className="flex flex-col">
+              <div className="w-3/4">
                 <h1 className="text-sm text-white text-opacity-60 mb-2">CONTACT</h1>
                 <h1 className="text-4xl text-white">Let's get in touch.</h1>
               </div>
