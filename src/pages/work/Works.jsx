@@ -76,13 +76,6 @@ function Works() {
 
             <a
               href="/contact"
-              className="relative before:contents-[''] before:absolute before:bg-black before:left-0 before:bottom-0 before:w-full before:scale-x-0 before:h-[1px] before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition before:duration-300 text-black text-sm"
-            >
-              CONTACT
-            </a>
-
-            <a
-              href="/contact"
               className="relative overflow-hidden flex justify-center items-center before:contents-[''] before: before:absolute before:bg-white before:-left-3 before:w-[120%] before:scale-x-100 before:h-full before:-skew-x-[20deg] hover:before:scale-x-0 before:transition-all before:duration-300 bg-primary border border-primary px-4 py-2 rounded-sm text-sm group"
             >
               <h1 className="text-black group-hover:text-white transition-all duration-300 z-10">LET'S TALK</h1>

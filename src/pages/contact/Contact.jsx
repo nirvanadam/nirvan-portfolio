@@ -181,8 +181,11 @@ function Contact() {
                 className="px-4 py-3 border border-gray-700 rounded-md bg-secondary outline-none text-white focus:border-white transition-all duration-300 placeholder:font-medium placeholder:text-white placeholder:text-opacity-50 focus:placeholder:-translate-y-10 placeholder:transition-all placeholder:duration-300"
               />
 
-              <button type="button" className=" bg-white border border-white py-3 rounded-md group">
-                <h1 className="text-sm text-black font-medium group-hover:text-yellow-00 transition-all duration-500 z-20">SEND MESSAGE</h1>
+              <button
+                type="button"
+                className="relative before:contents-[''] before:absolute before:top-0 before before:left-0 before:w-full before:h-full before:bg-transparent before:border before:broder-white before:rounded-md hover:before:scale-x-105 hover:before:scale-y-150 hover:before:opacity-0 before:transition-all before:duration-300 bg-white py-3 rounded-md hover:bg-opacity-80 active:scale-90 transition-all duration-300 group"
+              >
+                <h1 className="text-sm text-black font-medium group-hover:tracking-[2px] transition-all duration-300">SEND MESSAGE</h1>
               </button>
             </form>
           </Fade>
