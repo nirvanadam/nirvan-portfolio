@@ -130,8 +130,8 @@ function Services() {
       {/* Content */}
       <div
         className={`${
-          showMenu ? "before:contents-[''] overflow-hidden before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"
-        } relative`}
+          showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"
+        } relative overflow-hidden`}
       >
         {/* Section 1 */}
         <section className="flex flex-col items-center gap-3 px-5 md:px-14 py-10 lg:py-12 bg-primary">
