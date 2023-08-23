@@ -128,22 +128,29 @@ function Services() {
       {/* Navbar End */}
 
       {/* Content */}
-      <div className={`${showMenu ? "before:contents-[''] before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"} relative`}>
+      <div
+        className={`${
+          showMenu ? "before:contents-[''] overflow-hidden before:z-10 before:absolute before:bg-black  before:top-0 before:left-0 before:right-0 before:bottom-0 before:transition-all before:opacity-60" : "before:opacity-0"
+        } relative`}
+      >
         {/* Section 1 */}
-        <Fade bottom>
-          <section className="flex flex-col items-center gap-3 px-5 md:px-14 py-10 lg:py-12 bg-primary">
+        <section className="flex flex-col items-center gap-3 px-5 md:px-14 py-10 lg:py-12 bg-primary">
+          <Fade bottom>
             <h1 className="text-xs text-white text-opacity-50">SERVICES</h1>
             <h1 className="lg:w-[70%] xl:w-[60%] xl:mt-5 text-white text-4xl md:text-5xl xl:text-7xl md:leading-tight text-center">Unlock Your Website's Potential</h1>
             <p className="md:w-[70%] xl:w-[48%] text-white text-opacity-70 text-center text-lg">Maximize your website's capabilities and reach its full potential with our services.</p>
+          </Fade>
 
+          <Fade bottome>
             <a href="#section2" className="flex justify-center items-center gap-2 w-fit mt-5 group">
               <div className="overflow-hidden p-2 rounded-full border border-gray-600 bg-primary group-hover:border-white transition-all duration-500">
                 <img src="/icons/arrow-down.svg" alt="" className="w-5 group-hover:translate-y-8 transition-all duration-300" />
               </div>
               <h1 className="text-white text-sm font-medium text-opacity-60">EXPLORE</h1>
             </a>
-          </section>
-        </Fade>
+          </Fade>
+        </section>
+
         {/* Section 1 End */}
 
         {/* Section 2 */}
@@ -171,7 +178,7 @@ function Services() {
 
         {/* Web Design Section */}
         <Fade bottom>
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-20 px-6 md:px-12 lg:px-20 py-10">
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-20 px-6 md:px-12 lg:px-20 py-10 md:py-16 lg:py-20">
             <div className="">
               <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2">Web Design</h1>
               <p className="xl:text-lg">Premium, custom web design services that cater to the unique needs of each client</p>
@@ -180,16 +187,16 @@ function Services() {
                 onClick={() => {
                   setShowDetail1(!showDetail1);
                 }}
-                className="flex justify-center items-center gap-2 w-fit mt-5 group"
+                className="flex md:hidden justify-center items-center gap-2 w-fit mt-5 group"
               >
-                <div className="overflow-hidden p-2 rounded-full border border-gray-600 bg-primary group-hover:border-white transition-all duration-500">
-                  <img src="/icons/arrow-down.svg" alt="" className={`${showDetail1 ? "rotate-180" : ""} w-5 group-hover:translate-y-8 transition-all duration-300`} />
+                <div className=" overflow-hidden p-2 rounded-full border border-gray-600 bg-primary group-hover:border-white transition-all duration-500">
+                  <img src="/icons/arrow-down.svg" alt="" className={`${showDetail1 ? "rotate-180" : ""} w-5 transition-all duration-300`} />
                 </div>
                 <h1 className="text-black text-sm font-medium text-opacity-60">DETAIL</h1>
               </button>
             </div>
 
-            <div className={`${showDetail1 ? "" : "hidden"} flex flex-col gap-5 transition duration-300`}>
+            <div className={`${showDetail1 ? "" : "hidden md:flex"} flex flex-col gap-5 transition duration-300`}>
               <p>
                 As a web design specialist, I provide premium, custom web design services that cater to the unique needs of each client. I work closely with my clients throughout the design process to ensure their vision is brought to life
                 and their website stands out from the competition.
@@ -209,15 +216,88 @@ function Services() {
         {/* Web Design Section End */}
 
         {/* Webflow Development Section */}
+        <Fade bottom>
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-20 px-6 md:px-12 lg:px-20 py-10 md:py-16 lg:py-20">
+            <div className="">
+              <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2">Webflow Development</h1>
+              <p className="xl:text-lg">Beautiful, functional websites created using the powerful Webflow platform.</p>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowDetail1(!showDetail2);
+                }}
+                className="flex md:hidden justify-center items-center gap-2 w-fit mt-5 group"
+              >
+                <div className=" overflow-hidden p-2 rounded-full border border-gray-600 bg-primary group-hover:border-white transition-all duration-500">
+                  <img src="/icons/arrow-down.svg" alt="" className={`${showDetail2 ? "rotate-180" : ""} w-5 transition-all duration-300`} />
+                </div>
+                <h1 className="text-black text-sm font-medium text-opacity-60">DETAIL</h1>
+              </button>
+            </div>
 
+            <div className={`${showDetail2 ? "" : "hidden md:flex"} flex flex-col gap-5 transition duration-300`}>
+              <p>
+                As a Webflow expert, I have the skills and knowledge to create beautiful and functional websites using this powerful platform. I specialize in designing responsive websites that are optimized for speed and search engine
+                performance.
+              </p>
+
+              <p>With Webflow, I can provide clients with a highly customizable and easily manageable website that they can edit with ease, even with no prior web development experience.</p>
+
+              <ul className="flex flex-col gap-4 list-disc mx-5">
+                <li>Custom Webflow design and development</li>
+                <li>Responsive design and cross-browser compatibility</li>
+                <li>Webflow CMS and content management</li>
+                <li>Webflow hosting and ongoing maintenance</li>
+              </ul>
+            </div>
+          </section>
+        </Fade>
         {/* Webflow Development Section End */}
 
         {/*Content & SEO Section */}
+        <Fade bottom>
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-20 px-6 md:px-12 lg:px-20 py-10 md:py-16 lg:py-20">
+            <div className="">
+              <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2">Content & SEO</h1>
+              <p className="xl:text-lg">Comprehensive services that help businesses build a strong online presence.</p>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowDetail1(!showDetail3);
+                }}
+                className="flex md:hidden justify-center items-center gap-2 w-fit mt-5 group"
+              >
+                <div className=" overflow-hidden p-2 rounded-full border border-gray-600 bg-primary group-hover:border-white transition-all duration-500">
+                  <img src="/icons/arrow-down.svg" alt="" className={`${showDetail3 ? "rotate-180" : ""} w-5 transition-all duration-300`} />
+                </div>
+                <h1 className="text-black text-sm font-medium text-opacity-60">DETAIL</h1>
+              </button>
+            </div>
 
+            <div className={`${showDetail3 ? "" : "hidden md:flex"} flex flex-col gap-5 transition duration-300`}>
+              <p>
+                As a content creator and SEO specialist, I offer comprehensive services that help businesses build a strong online presence. I create high-quality, engaging content that resonates with the target audience and drives
+                conversions.
+              </p>
+
+              <p>
+                Additionally, I optimize the content for search engines, making it easier for my clients' websites to rank higher in search results. By combining quality content creation and SEO, I help businesses attract and engage their
+                ideal customers, ultimately driving growth and success.
+              </p>
+
+              <ul className="flex flex-col gap-4 list-disc mx-5">
+                <li>Content strategy and planning</li>
+                <li>Content creation</li>
+                <li>Keyword research and on-page optimization</li>
+                <li>Off-page optimization, including backlinking</li>
+              </ul>
+            </div>
+          </section>
+        </Fade>
         {/*COntent & SEO Section End */}
 
         {/* My Process Section */}
-        <section className="grid grid-cols-1  md:grid-cols-2 gap-12 lg:gap-14 px-5 md:px-14 lg:px-16 py-10">
+        <section className="grid grid-cols-1  md:grid-cols-2 gap-12 lg:gap-14 px-5 md:px-14 lg:px-16 py-10 md:my-20">
           <Fade bottom>
             <div className="flex flex-col gap-2 xl:pr-10">
               <h1 className="text-sm font-medium opacity-70 uppercase">My Process</h1>
