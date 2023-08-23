@@ -54,12 +54,12 @@ function Footer() {
         <div className="flex flex-col gap-5">
           <h1 className="text-xl font-l">CMS</h1>
           <div className="flex flex-col gap-5">
-            <Link className="text-xs font-medium text-white text-opacity-60">WORK</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">WORK SINGLE</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">BLOG</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">BLOG SINGLE</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">PRICING</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">PRICING SINGLE</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">WORK</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">WORK SINGLE</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">BLOG</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">BLOG SINGLE</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">PRICING</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">PRICING SINGLE</Link>
           </div>
         </div>
         {/* Col 3 End */}
@@ -68,11 +68,11 @@ function Footer() {
         <div className="flex flex-col gap-5">
           <h1 className="text-xl font-l">UTILITY PAGES</h1>
           <div className="flex flex-col gap-5">
-            <Link className="text-xs font-medium text-white text-opacity-60">404 ERROR PAGE</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">PASSWORD PROTECTTED</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">STYLE GUIDE</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">LICENSING</Link>
-            <Link className="text-xs font-medium text-white text-opacity-60">CHANGELOG</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">404 ERROR PAGE</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">PASSWORD PROTECTTED</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">STYLE GUIDE</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">LICENSING</Link>
+            <Link className="text-xs font-medium text-white text-opacity-60 hover:text-white transition-all duration-300">CHANGELOG</Link>
           </div>
         </div>
         {/* Col 4 End */}

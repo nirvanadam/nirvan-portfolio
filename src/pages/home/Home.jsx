@@ -273,9 +273,9 @@ function Home() {
               <h1 className="text-sm font-medium opacity-70 uppercase">My Process</h1>
               <h1 className="text-3xl xl:text-5xl md:text-4xl md:leading-tight xl:leading-snug">Your Dream Website in just few steps</h1>
               <p className="text-lg opacity-70">From consultation to launch, our streamlined process ensures timely delivery and quality work.</p>
-              <a href="/contact" className="flex justify-center items-center gap-2 w-fit mt-4 px-4 py-3 rounded-md bg-primary text-white text-xs font-medium ">
+              <a href="/contact" className="overflow-hidden flex justify-center items-center gap-2 w-fit mt-4 px-4 py-3 rounded-md bg-primary text-white text-xs font-medium group">
                 <h1>GET IN TOUCH</h1>
-                <img src="/icons/arrow-up-right.svg" alt="" className="w-4" />
+                <img src="/icons/arrow-up-right.svg" alt="" className="w-4 group-hover:translate-x-7 group-hover:-translate-y-7 transition-all duration-300" />
               </a>
             </div>
           </Fade>
@@ -344,11 +344,13 @@ function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-9">
               {customers.map((customer) => {
                 return (
-                  <div className="flex flex-col gap-5 p-6 rounded-lg border border-gray-300">
-                    <img src="/icons/target.svg" alt="" className="w-8" />
+                  <div className="flex flex-col justify-between gap-5 p-6 rounded-lg border border-gray-300">
+                    <div className="flex flex-col gap-3">
+                      <img src="/icons/target.svg" alt="" className="w-8" />
 
-                    <h1 className="text-2xl">{customer.comment}</h1>
-                    <p className="opacity-60">{customer.desc}</p>
+                      <h1 className="text-2xl">{customer.comment}</h1>
+                      <p className="opacity-60">{customer.desc}</p>
+                    </div>
 
                     <div className="flex items-center gap-4">
                       <img src="/icons/user.svg" alt="" className="bg-black p-3 rounded-full" />
@@ -424,9 +426,9 @@ function Home() {
           </Fade>
 
           <Fade bottom>
-            <a href="/contact" className="flex justify-center items-center gap-2 w-fit md:mt-5 px-4 py-3 rounded-md bg-white">
+            <a href="/contact" className="overflow-hidden flex justify-center items-center gap-2 w-fit md:mt-5 px-4 py-3 rounded-md bg-white group">
               <h1 className="text-xs font-medium text-opacity-60">GET IN TOUCH</h1>
-              <img src="/icons/arrow-up-right.svg" alt="" className="w-4 invert" />
+              <img src="/icons/arrow-up-right.svg" alt="" className="w-4 group-hover:translate-x-7 group-hover:-translate-y-7 transition-all duration-300 invert" />
             </a>
           </Fade>
         </section>
